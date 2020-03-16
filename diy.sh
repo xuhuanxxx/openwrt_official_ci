@@ -18,5 +18,5 @@ git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
 git clone https://github.com/vernesong/OpenClash package/OpenClash
 git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
 
-git clone https://github.com/falafalafala1668/OpenWrt-UEFI-Support OpenWrt-UEFI-Support
-./OpenWrt-UEFI-Support/RunMe.sh apply
+# git clone https://github.com/falafalafala1668/OpenWrt-UEFI-Support OpenWrt-UEFI-Support
+# ./OpenWrt-UEFI-Support/RunMe.sh apply
