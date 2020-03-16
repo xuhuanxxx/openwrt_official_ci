@@ -16,6 +16,7 @@ on:
       - master
     paths:
       - '.config'
+      - 'DIY.sh'
     schedule:
       - cron: 0 8 * * 5
     watch:
