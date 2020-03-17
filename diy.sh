@@ -14,9 +14,6 @@ sed -i 's/option lang auto/option lang "zh_cn"/g' feeds/luci/modules/luci-base/r
 # sed -i '/netgear/d' feeds.conf.default
 sed -i '$a\src-git netgear git://github.com/ysoyipek/luci-theme-netgear.git' feeds.conf.default
 
-# sed -i '/https://github.com/rosywrt/luci.git/d' feeds.conf.default
-sed -i '$a\src-git luci https://github.com/rosywrt/luci.git' feeds.conf.default
-
 # sed -i '/option Netgear/d' feeds/luci/modules/luci-base/root/etc/config/luci
 # sed -i '/option Bootstrap/d' feeds/luci/modules/luci-base/root/etc/config/luci
 # sed -i '/option Material/d' feeds/luci/modules/luci-base/root/etc/config/luci
