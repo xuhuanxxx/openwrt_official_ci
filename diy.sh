@@ -47,7 +47,7 @@ if [ -d "package/luci-theme-argon" ]; then
 fi
 
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-
+sed -i '$a\src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
 if [ -d "OpenWrt-UEFI-Support" ]; then
 	rm -rf "OpenWrt-UEFI-Support"
