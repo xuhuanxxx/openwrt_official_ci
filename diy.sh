@@ -1,11 +1,3 @@
-#!/bin/bash
-#=================================================
-# Description: DIY script
-# Lisence: MIT
-# Author: P3TERX
-# Blog: https://p3terx.com
-#=================================================
-# Modify default IP
 sed -i '/root/d' package/base-files/files/etc/shadow
 sed -i '1i\root:$1$XVyBXUIp$qDem8k6G0pkLNUCOB9f0G/:18334:0:99999:7:::'  package/base-files/files/etc/shadow
 
@@ -20,20 +12,20 @@ sed -i "/hostname/a\                set system.@system[-1].timezone='CST-8'" pac
 sed -i '/listen_https/d' package/network/services/uhttpd/files/uhttpd.config
 sed -i '/HTTP listen addresses/a\        list listen_https       [::]:443' package/network/services/uhttpd/files/uhttpd.config
 sed -i '/HTTP listen addresses/a\        list listen_https       0.0.0.0:443' package/network/services/uhttpd/files/uhttpd.config
-# sed -i '/redirect_https/s/0/1/g' package/network/services/uhttpd/files/uhttpd.config
-
-if [ -d "package/luci-app-clash" ]; then
-	rm -rf "package/luci-app-clash"
-fi
-
-git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
+sed -i '/redirect_https/s/0/1/g' package/network/services/uhttpd/files/uhttpd.config
 
 if [ -d "package/luci-theme-argon" ]; then
 	        rm -rf "package/luci-theme-argon"
 fi
 
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-# sed -i '$a\src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+
+
+if [ -d "package/luci-app-clash" ]; then
+	rm -rf "package/luci-app-clash"
+fi
+
+git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
 
 if [ -d "OpenWrt-UEFI-Support" ]; then
 	rm -rf "OpenWrt-UEFI-Support"
