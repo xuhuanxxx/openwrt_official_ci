@@ -22,32 +22,18 @@ sed -i '/HTTP listen addresses/a\        list listen_https       [::]:443' packa
 sed -i '/HTTP listen addresses/a\        list listen_https       0.0.0.0:443' package/network/services/uhttpd/files/uhttpd.config
 # sed -i '/redirect_https/s/0/1/g' package/network/services/uhttpd/files/uhttpd.config
 
-
 if [ -d "package/luci-app-clash" ]; then
 	rm -rf "package/luci-app-clash"
 fi
 
 git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
 
-if [ -d "package/OpenClash" ]; then
-	rm -rf "package/OpenClash"
-fi
-
-git clone https://github.com/vernesong/OpenClash package/OpenClash
-
-if [ -d "package/luci-app-adguardhome" ]; then
-	rm -rf "package/luci-app-adguardhome"
-fi
-
-git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
-
-
 if [ -d "package/luci-theme-argon" ]; then
 	        rm -rf "package/luci-theme-argon"
 fi
 
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-sed -i '$a\src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+# sed -i '$a\src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
 if [ -d "OpenWrt-UEFI-Support" ]; then
 	rm -rf "OpenWrt-UEFI-Support"
