@@ -15,7 +15,7 @@ sed -i '/HTTP listen addresses/a\        list listen_https       0.0.0.0:443' pa
 sed -i '/redirect_https/s/0/1/g' package/network/services/uhttpd/files/uhttpd.config
 
 if [ -d "package/luci-theme-argon" ]; then
-	        rm -rf "package/luci-theme-argon"
+	rm -rf "package/luci-theme-argon"
 fi
 
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
